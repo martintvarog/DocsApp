@@ -9,11 +9,17 @@
     <projectFile profileName="https">HomeWorkApp/HomeWorkApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf1331b-fa4f-425c-85fb-950cb6150760" name="Changes" comment="project setup">
+    <list default="true" id="3bf1331b-fa4f-425c-85fb-950cb6150760" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Core/Infrastructure/IDocumentService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HomeWorkApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HomeWorkApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Infrastructure/IDocumentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Infrastructure/IDocumentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Repository/DocumentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Repository/DocumentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Entities/Data.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Entities/Document.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Entities/Document.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Di/Class1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Di/WebDi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Di/Di.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Di/Di.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/DocumentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/DocumentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Controllers/DocumentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Controllers/DocumentsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Web.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +27,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/tvarog/ConsoleApps/HomeWorkApp/Core/Infrastructure/IDocumentRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tvarog/ConsoleApps/HomeWorkApp/Infrastructure/Repository/DocumentRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Web/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -151,7 +159,7 @@
       <updated>1675198041702</updated>
       <workItem from="1675198043446" duration="2461000" />
       <workItem from="1675257857251" duration="1594000" />
-      <workItem from="1675270186326" duration="4366000" />
+      <workItem from="1675270186326" duration="6331000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1675198248566</created>
@@ -174,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675280597321</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add DocumentRepository.cs">
+      <created>1675281783694</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675281783694</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +202,7 @@
     <MESSAGE value="init commit" />
     <MESSAGE value="root structure" />
     <MESSAGE value="project setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="project setup" />
+    <MESSAGE value="add DocumentRepository.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add DocumentRepository.cs" />
   </component>
 </project>
