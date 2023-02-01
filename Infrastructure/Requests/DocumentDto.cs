@@ -1,6 +1,6 @@
 namespace Infrastructure.Requests;
 
-public abstract class DocumentDto
+public class DocumentDto
 {
     public string Id { get; set; } = string.Empty;
 

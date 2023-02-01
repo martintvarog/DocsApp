@@ -10,7 +10,7 @@ public static class WebDi
 {
     public static void ConfigureServices(IServiceCollection services, IConfiguration config)
     {
-        services.AddScoped<IDocumentRepository, DocumentRepository>();
+        services.AddSingleton<IDocumentRepository, DocumentRepository>();
         services.AddScoped<IDocumentService, DocumentService>();
     }
 }

@@ -9,17 +9,12 @@
     <projectFile profileName="https">HomeWorkApp/HomeWorkApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf1331b-fa4f-425c-85fb-950cb6150760" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Core/Infrastructure/IDocumentService.cs" afterDir="false" />
+    <list default="true" id="3bf1331b-fa4f-425c-85fb-950cb6150760" name="Changes" comment="Add controllers, document service">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HomeWorkApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HomeWorkApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Entities/Data.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Entities/Document.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Entities/Document.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Di/Class1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Di/WebDi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Di/Di.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Di/Di.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/DocumentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/DocumentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Di/WebDi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Di/WebDi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Requests/DocumentDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Requests/DocumentDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/Controllers/DocumentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Controllers/DocumentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Web.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/WeatherForecast.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +22,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/tvarog/ConsoleApps/HomeWorkApp/Core/Entities/Document.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tvarog/ConsoleApps/HomeWorkApp/Core/Infrastructure/IDocumentRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/tvarog/ConsoleApps/HomeWorkApp/Core/Infrastructure/IDocumentRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/tvarog/ConsoleApps/HomeWorkApp/Infrastructure/Repository/DocumentRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tvarog/ConsoleApps/HomeWorkApp/Infrastructure/Repository/DocumentRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tvarog/ConsoleApps/HomeWorkApp/Infrastructure/Services/DocumentService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tvarog/ConsoleApps/HomeWorkApp/Infrastructure/Services/DocumentService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tvarog/ConsoleApps/HomeWorkApp/Infrastructure/Services/IDocumentService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tvarog/ConsoleApps/HomeWorkApp/Web/Controllers/DocumentsController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tvarog/ConsoleApps/HomeWorkApp/Web/Controllers/DocumentsController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tvarog/ConsoleApps/HomeWorkApp/Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Web/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -204,5 +208,37 @@
     <MESSAGE value="project setup" />
     <MESSAGE value="add DocumentRepository.cs" />
     <option name="LAST_COMMIT_MESSAGE" value="add DocumentRepository.cs" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Web/Controllers/DocumentsController.cs</url>
+          <line>21</line>
+          <properties documentPath="C:\Users\tvarog\ConsoleApps\HomeWorkApp\Web\Controllers\DocumentsController.cs" initialLine="21" containingFunctionPresentation="method 'Get'">
+            <startOffsets>
+              <option value="598" />
+            </startOffsets>
+            <endOffsets>
+              <option value="599" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Web/Controllers/DocumentsController.cs</url>
+          <line>50</line>
+          <properties documentPath="C:\Users\tvarog\ConsoleApps\HomeWorkApp\Web\Controllers\DocumentsController.cs" initialLine="50" containingFunctionPresentation="method 'Put'">
+            <startOffsets>
+              <option value="1324" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1325" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

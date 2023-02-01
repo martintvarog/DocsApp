@@ -1,4 +1,3 @@
-using Core.Infrastructure;
 using Infrastructure.Requests;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -47,8 +46,8 @@ public class DocumentsController : ControllerBase
         return Ok();
     }
 
-    [HttpPut("{id}")]
-    public async Task<IActionResult> Put(string id, [FromBody] DocumentDto document)
+    [HttpPut]
+    public async Task<IActionResult> Put([FromBody] DocumentDto document)
     {
         if (!await _documentService.UpdateDocumentAsync(document))
             return NotFound();
