@@ -1,3 +1,6 @@
+using Core.Infrastructure;
+using Infrastructure.Requests;
+using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DocsApp.Controllers;
@@ -6,39 +9,50 @@ namespace DocsApp.Controllers;
 [Route("[controller]")]
 public class DocumentsController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
     private readonly ILogger<DocumentsController> _logger;
+    private readonly IDocumentService _documentService;
 
-    public DocumentsController(ILogger<DocumentsController> logger)
+    public DocumentsController(ILogger<DocumentsController> logger, IDocumentService documentService)
     {
         _logger = logger;
+        _documentService = documentService;
     }
 
-    [HttpGet(Name = "documents/{id}")]
-    public IEnumerable<WeatherForecast> GetDocumentById()
+    [HttpGet("{id}")]
+    public async Task<IActionResult> Get(string id)
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+        var document = await _documentService.GetDocumentByIdAsync(id);
+        if (!document.Any())
+            return NotFound();
+
+        if (Request.Headers["Accept"] == "application/xml")
+        {
+            // implement conversion from Document to XML string
+        }
+        else
+        {
+            // default to JSON format
+            return Ok(document);
+        }
+
+        return Ok();
     }
-    
-    [HttpPost(Name = "documents")]
-    public IEnumerable<WeatherForecast> PostDocument()
+
+    [HttpPost]
+    public async Task<IActionResult> Post([FromBody] DocumentDto document)
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+        if (!await _documentService.AddDocumentAsync(document))
+            return BadRequest();
+
+        return Ok();
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Put(string id, [FromBody] DocumentDto document)
+    {
+        if (!await _documentService.UpdateDocumentAsync(document))
+            return NotFound();
+
+        return Ok();
     }
 }
