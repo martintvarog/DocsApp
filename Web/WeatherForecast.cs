@@ -1,4 +1,4 @@
-namespace HomeWorkApp;
+namespace DocsApp;
 
 public class WeatherForecast
 {
