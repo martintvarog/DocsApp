@@ -8,12 +8,10 @@ namespace DocsApp.Controllers;
 [Route("[controller]")]
 public class DocumentsController : ControllerBase
 {
-    private readonly ILogger<DocumentsController> _logger;
     private readonly IDocumentService _documentService;
 
-    public DocumentsController(ILogger<DocumentsController> logger, IDocumentService documentService)
+    public DocumentsController(IDocumentService documentService)
     {
-        _logger = logger;
         _documentService = documentService;
     }
 
