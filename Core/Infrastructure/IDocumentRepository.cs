@@ -4,7 +4,7 @@ namespace Core.Infrastructure;
 
 public interface IDocumentRepository
 {
-    Task<Document> GetDocumentByIdAsync(string id);
+    Task<List<Document>> GetDocumentByIdAsync(string id);
 
     Task<bool> AddDocumentAsync(Document document);
 
