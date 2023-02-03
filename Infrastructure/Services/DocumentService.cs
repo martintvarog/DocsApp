@@ -1,4 +1,5 @@
-﻿using Core.Entities;
+﻿using System.Xml.Serialization;
+using Core.Entities;
 using Core.Infrastructure;
 using Infrastructure.Extensions;
 using Infrastructure.Requests;
@@ -18,9 +19,17 @@ public class DocumentService : IDocumentService
         => await _documentRepository.GetDocumentByIdAsync(id);
 
     public Task<bool> AddDocumentAsync(DocumentDto document)
-        => _documentRepository.AddDocumentAsync(document.MapToEntity());
+        => _documentRepository.AddDocumentAsync(document.MapDocument());
 
 
     public Task<bool> UpdateDocumentAsync(DocumentDto document)
-        => _documentRepository.UpdateDocumentAsync(document.MapToEntity());
+        => _documentRepository.UpdateDocumentAsync(document.MapDocument());
+
+    public StringWriter ConvertDocumentXmlAsync(DocumentDto document)
+    {
+        var xmlSerializer = new XmlSerializer(typeof(DocumentDto));
+        var stringWriter = new StringWriter();
+        xmlSerializer.Serialize(stringWriter, document);
+        return stringWriter;
+    }
 }

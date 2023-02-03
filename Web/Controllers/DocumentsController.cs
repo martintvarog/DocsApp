@@ -1,3 +1,4 @@
+using Infrastructure.Extensions;
 using Infrastructure.Requests;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -23,16 +24,9 @@ public class DocumentsController : ControllerBase
             return NotFound();
 
         if (Request.Headers["Accept"] == "application/xml")
-        {
-            // implement conversion from Document to XML string
-        }
-        else
-        {
-            // default to JSON format
-            return Ok(document);
-        }
+            return Content(_documentService.ConvertDocumentXmlAsync(document.First().MapDocument()).ToString());
 
-        return Ok();
+        return Ok(document);
     }
 
     [HttpPost]

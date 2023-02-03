@@ -5,6 +5,14 @@ namespace Infrastructure.Extensions;
 
 public static class DocumentMapper
 {
-    public static Document MapToEntity(this DocumentDto dto)
+    public static Document MapDocument(this DocumentDto dto)
         => new(Id: dto.Id, Tags: dto.Tags, Data: dto.Data);
+
+    public static DocumentDto MapDocument(this Document entity)
+        => new()
+        {
+            Id = entity.Id,
+            Tags = entity.Tags,
+            Data = entity.Data
+        };
 }

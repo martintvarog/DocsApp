@@ -10,4 +10,6 @@ public interface IDocumentService
     Task<bool> AddDocumentAsync(DocumentDto document);
 
     Task<bool> UpdateDocumentAsync(DocumentDto document);
+    
+    StringWriter ConvertDocumentXmlAsync(DocumentDto document);
 }

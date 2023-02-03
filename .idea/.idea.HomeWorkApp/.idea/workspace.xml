@@ -9,7 +9,14 @@
     <projectFile profileName="https">HomeWorkApp/HomeWorkApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf1331b-fa4f-425c-85fb-950cb6150760" name="Changes" comment="saving and retrieving json data" />
+    <list default="true" id="3bf1331b-fa4f-425c-85fb-950cb6150760" name="Changes" comment="add unitest prj">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HomeWorkApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HomeWorkApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Extensions/DocumentMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Extensions/DocumentMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Requests/DocumentDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Requests/DocumentDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/DocumentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/DocumentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/IDocumentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/IDocumentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Controllers/DocumentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Controllers/DocumentsController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675286028728</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add unitest prj">
+      <created>1675286542937</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675286542937</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,36 +223,37 @@
     <MESSAGE value="project setup" />
     <MESSAGE value="add DocumentRepository.cs" />
     <MESSAGE value="saving and retrieving json data" />
-    <option name="LAST_COMMIT_MESSAGE" value="saving and retrieving json data" />
+    <MESSAGE value="add unitest prj" />
+    <option name="LAST_COMMIT_MESSAGE" value="add unitest prj" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Web/Controllers/DocumentsController.cs</url>
-          <line>21</line>
-          <properties documentPath="C:\Users\tvarog\ConsoleApps\HomeWorkApp\Web\Controllers\DocumentsController.cs" initialLine="21" containingFunctionPresentation="method 'Get'">
-            <startOffsets>
-              <option value="598" />
-            </startOffsets>
-            <endOffsets>
-              <option value="599" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Web/Controllers/DocumentsController.cs</url>
-          <line>50</line>
+          <line>42</line>
           <properties documentPath="C:\Users\tvarog\ConsoleApps\HomeWorkApp\Web\Controllers\DocumentsController.cs" initialLine="50" containingFunctionPresentation="method 'Put'">
             <startOffsets>
-              <option value="1324" />
+              <option value="1161" />
             </startOffsets>
             <endOffsets>
-              <option value="1325" />
+              <option value="1162" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Infrastructure/Services/DocumentService.cs</url>
+          <line>28</line>
+          <properties documentPath="C:\Users\tvarog\ConsoleApps\HomeWorkApp\Infrastructure\Services\DocumentService.cs" initialLine="28" containingFunctionPresentation="method 'ConvertDocumentAsync'">
+            <startOffsets>
+              <option value="909" />
+            </startOffsets>
+            <endOffsets>
+              <option value="910" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
