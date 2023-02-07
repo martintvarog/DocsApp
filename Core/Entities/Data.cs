@@ -1,8 +1,8 @@
 namespace Core.Entities;
 
-public sealed class Data
+public sealed record Data
 {
-    public string Some { get; set; } = string.Empty;
+    public string Some { get; init; } = string.Empty;
     
-    public string Optional { get; set; } = string.Empty;
+    public string Optional { get; init; } = string.Empty;
 }

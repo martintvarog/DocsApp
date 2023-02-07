@@ -5,7 +5,7 @@ namespace Core.Infrastructure;
 
 public interface IDocumentService
 {
-    Task<List<Document>> GetDocumentByIdAsync(string id);
+    Task<IReadOnlyCollection<Document>> GetDocumentByIdAsync(string id);
 
     Task<bool> AddDocumentAsync(DocumentDto document);
 

@@ -1,11 +1,10 @@
 namespace Core.Infrastructure.DTOs;
 
-public class DocumentDto
+public sealed record DocumentDto
 {
-    public string Id { get; set; } = string.Empty;
+    public string Id { get; init; } = string.Empty;
 
-    public List<string> Tags { get; set; } = new();
+    public List<string> Tags { get; init; } = new();
 
-    public DataDto Data { get; set; } = default!;
-
+    public DataDto Data { get; init; } = default!;
 }

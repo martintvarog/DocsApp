@@ -13,9 +13,11 @@ public class DocumentRepository : IDocumentRepository
 
     public Task<bool> AddDocumentAsync(Document document)
     {
+        if (_documents.Any(x => x.Id == document.Id)) return Task.FromResult(false);
         _documents.Add(document);
         return Task.FromResult(true);
     }
+
 
     public async Task<bool> UpdateDocumentAsync(Document document)
     {

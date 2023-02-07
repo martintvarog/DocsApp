@@ -14,7 +14,7 @@ public class DocumentService : IDocumentService
         _documentRepository = documentRepository;
     }
 
-    public async Task<List<Document>> GetDocumentByIdAsync(string id)
+    public async Task<IReadOnlyCollection<Document>> GetDocumentByIdAsync(string id)
         => await _documentRepository.GetDocumentByIdAsync(id);
 
     public Task<bool> AddDocumentAsync(DocumentDto document)
