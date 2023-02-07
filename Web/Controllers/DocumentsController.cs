@@ -25,9 +25,6 @@ public class DocumentsController : ControllerBase
         if (!document.Any())
             return NotFound();
 
-        // if (Request.Headers["Accept"] == "application/xml")
-        //     return Content(_documentService.ConvertDocumentXmlAsync(document.First().MapToDocument()).ToString());
-
         return Ok(document.First().MapToDocument());
     }
 
