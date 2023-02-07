@@ -1,7 +1,5 @@
-﻿using System.Xml.Serialization;
-using Core.Entities;
+﻿using Core.Entities;
 using Core.Infrastructure;
-using Core.Infrastructure.DTOs;
 
 namespace Infrastructure.DocumentService;
 
@@ -22,12 +20,4 @@ public class DocumentService : IDocumentService
 
     public Task<bool> UpdateDocumentAsync(Document document)
         => _documentRepository.UpdateDocumentAsync(document);
-
-    public StringWriter ConvertDocumentXmlAsync(DocumentDto document)
-    {
-        var xmlSerializer = new XmlSerializer(typeof(DocumentDto));
-        var stringWriter = new StringWriter();
-        xmlSerializer.Serialize(stringWriter, document);
-        return stringWriter;
-    }
 }

@@ -1,5 +1,3 @@
-using System.Xml.Serialization;
-using Core.Entities;
 using Core.Infrastructure;
 using Core.Infrastructure.DTOs;
 using Infrastructure.Extensions;
