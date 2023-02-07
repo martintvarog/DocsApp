@@ -1,5 +1,3 @@
-using Core.Entities;
-
 namespace Core.Infrastructure.DTOs;
 
 public class DocumentDto
