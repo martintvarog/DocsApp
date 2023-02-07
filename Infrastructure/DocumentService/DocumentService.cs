@@ -1,10 +1,9 @@
 ﻿using System.Xml.Serialization;
 using Core.Entities;
 using Core.Infrastructure;
-using Infrastructure.Extensions;
-using Infrastructure.Requests;
+using Core.Infrastructure.DTOs;
 
-namespace Infrastructure.Services;
+namespace Infrastructure.DocumentService;
 
 public class DocumentService : IDocumentService
 {
@@ -18,12 +17,11 @@ public class DocumentService : IDocumentService
     public async Task<List<Document>> GetDocumentByIdAsync(string id)
         => await _documentRepository.GetDocumentByIdAsync(id);
 
-    public Task<bool> AddDocumentAsync(DocumentDto document)
-        => _documentRepository.AddDocumentAsync(document.MapDocument());
+    public Task<bool> AddDocumentAsync(Document document)
+        => _documentRepository.AddDocumentAsync(document);
 
-
-    public Task<bool> UpdateDocumentAsync(DocumentDto document)
-        => _documentRepository.UpdateDocumentAsync(document.MapDocument());
+    public Task<bool> UpdateDocumentAsync(Document document)
+        => _documentRepository.UpdateDocumentAsync(document);
 
     public StringWriter ConvertDocumentXmlAsync(DocumentDto document)
     {

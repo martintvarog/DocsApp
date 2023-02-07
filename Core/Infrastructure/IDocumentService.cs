@@ -1,15 +1,15 @@
 ﻿using Core.Entities;
-using Infrastructure.Requests;
+using Core.Infrastructure.DTOs;
 
-namespace Infrastructure.Services;
+namespace Core.Infrastructure;
 
 public interface IDocumentService
 {
     Task<List<Document>> GetDocumentByIdAsync(string id);
 
-    Task<bool> AddDocumentAsync(DocumentDto document);
+    Task<bool> AddDocumentAsync(Document document);
 
-    Task<bool> UpdateDocumentAsync(DocumentDto document);
+    Task<bool> UpdateDocumentAsync(Document document);
     
     StringWriter ConvertDocumentXmlAsync(DocumentDto document);
 }

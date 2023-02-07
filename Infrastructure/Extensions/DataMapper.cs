@@ -1,13 +1,13 @@
 ﻿using Core.Entities;
-using Infrastructure.EntityFrameworkCore.Entities;
+using Core.Infrastructure.DTOs;
 
 namespace Infrastructure.Extensions;
 
 public static class DataMapper
 {
-    public static Data MapData(this DataEntity dataEntity)
-        => new();
-    
-    public static DataEntity MapData(this Data data)
-        => new();
+    public static Data MapToData(this DataDto dataDto)
+        => new Data();
+
+    public static DataDto MapToData(this Data data)
+        => new DataDto();
 }

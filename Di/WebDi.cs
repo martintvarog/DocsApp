@@ -1,6 +1,6 @@
 ﻿using Core.Infrastructure;
+using Infrastructure.DocumentService;
 using Infrastructure.Repository;
-using Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

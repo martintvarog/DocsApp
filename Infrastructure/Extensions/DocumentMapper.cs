@@ -1,18 +1,18 @@
 ﻿using Core.Entities;
-using Infrastructure.Requests;
+using Core.Infrastructure.DTOs;
 
 namespace Infrastructure.Extensions;
 
 public static class DocumentMapper
 {
-    public static Document MapDocument(this DocumentDto dto)
-        => new(Id: dto.Id, Tags: dto.Tags, Data: dto.Data);
+    public static Document MapToDocument(this DocumentDto documentDto)
+        => new Document(documentDto.Id, documentDto.Tags, documentDto.Data.MapToData());
 
-    public static DocumentDto MapDocument(this Document entity)
+    public static DocumentDto MapToDocument(this Document document)
         => new()
         {
-            Id = entity.Id,
-            Tags = entity.Tags,
-            Data = entity.Data
+            Id = document.Id,
+            Tags = document.Tags,
+            Data = document.Data.MapToData()
         };
 }

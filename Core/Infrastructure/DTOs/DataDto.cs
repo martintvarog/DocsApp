@@ -1,6 +1,6 @@
-namespace Core.Entities;
+namespace Core.Infrastructure.DTOs;
 
-public sealed class Data
+public class DataDto
 {
     public string Some { get; set; } = string.Empty;
     

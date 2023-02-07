@@ -1,6 +1,8 @@
+using System.Xml.Serialization;
+using Core.Entities;
+using Core.Infrastructure;
+using Core.Infrastructure.DTOs;
 using Infrastructure.Extensions;
-using Infrastructure.Requests;
-using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DocsApp.Controllers;
@@ -23,16 +25,16 @@ public class DocumentsController : ControllerBase
         if (!document.Any())
             return NotFound();
 
-        if (Request.Headers["Accept"] == "application/xml")
-            return Content(_documentService.ConvertDocumentXmlAsync(document.First().MapDocument()).ToString());
+        // if (Request.Headers["Accept"] == "application/xml")
+        //     return Content(_documentService.ConvertDocumentXmlAsync(document.First().MapToDocument()).ToString());
 
-        return Ok(document);
+        return Ok(document.First().MapToDocument());
     }
 
     [HttpPost]
     public async Task<IActionResult> Post([FromBody] DocumentDto document)
     {
-        if (!await _documentService.AddDocumentAsync(document))
+        if (!await _documentService.AddDocumentAsync(document.MapToDocument()))
             return BadRequest();
 
         return Ok();
@@ -41,7 +43,7 @@ public class DocumentsController : ControllerBase
     [HttpPut]
     public async Task<IActionResult> Put([FromBody] DocumentDto document)
     {
-        if (!await _documentService.UpdateDocumentAsync(document))
+        if (!await _documentService.UpdateDocumentAsync(document.MapToDocument()))
             return NotFound();
 
         return Ok();
