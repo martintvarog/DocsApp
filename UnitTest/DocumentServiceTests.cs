@@ -1,6 +1,7 @@
 ﻿using Core.Entities;
 using Core.Infrastructure;
 using Infrastructure.DocumentService;
+using Infrastructure.Extensions;
 using Moq;
 
 namespace UnitTest
@@ -35,7 +36,7 @@ namespace UnitTest
             var document = new Document("1", new List<string> {"Test Tag"}, new Data());
 
             // Act
-            await _documentService.AddDocumentAsync(document);
+            await _documentService.AddDocumentAsync(document.MapToDocument());
 
             // Assert
             _documentRepositoryMock.Verify(r => r.AddDocumentAsync(document), Times.Once());
@@ -48,7 +49,7 @@ namespace UnitTest
             var document = new Document("1", new List<string> {"Test Tag"}, new Data());
 
             // Act
-            await _documentService.UpdateDocumentAsync(document);
+            await _documentService.UpdateDocumentAsync(document.MapToDocument());
 
             // Assert
             _documentRepositoryMock.Verify(r => r.UpdateDocumentAsync(document), Times.Once());

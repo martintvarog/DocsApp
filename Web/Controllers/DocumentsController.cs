@@ -29,7 +29,7 @@ public class DocumentsController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Post([FromBody] DocumentDto document)
     {
-        if (!await _documentService.AddDocumentAsync(document.MapToDocument()))
+        if (!await _documentService.AddDocumentAsync(document))
             return BadRequest();
 
         return Ok();
@@ -38,7 +38,7 @@ public class DocumentsController : ControllerBase
     [HttpPut]
     public async Task<IActionResult> Put([FromBody] DocumentDto document)
     {
-        if (!await _documentService.UpdateDocumentAsync(document.MapToDocument()))
+        if (!await _documentService.UpdateDocumentAsync(document))
             return NotFound();
 
         return Ok();

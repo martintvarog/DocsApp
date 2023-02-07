@@ -1,5 +1,7 @@
 ﻿using Core.Entities;
 using Core.Infrastructure;
+using Core.Infrastructure.DTOs;
+using Infrastructure.Extensions;
 
 namespace Infrastructure.DocumentService;
 
@@ -15,9 +17,9 @@ public class DocumentService : IDocumentService
     public async Task<List<Document>> GetDocumentByIdAsync(string id)
         => await _documentRepository.GetDocumentByIdAsync(id);
 
-    public Task<bool> AddDocumentAsync(Document document)
-        => _documentRepository.AddDocumentAsync(document);
+    public Task<bool> AddDocumentAsync(DocumentDto document)
+        => _documentRepository.AddDocumentAsync(document.MapToDocument());
 
-    public Task<bool> UpdateDocumentAsync(Document document)
-        => _documentRepository.UpdateDocumentAsync(document);
+    public Task<bool> UpdateDocumentAsync(DocumentDto document)
+        => _documentRepository.UpdateDocumentAsync(document.MapToDocument());
 }
