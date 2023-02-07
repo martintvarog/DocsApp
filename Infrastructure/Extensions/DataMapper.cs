@@ -6,8 +6,16 @@ namespace Infrastructure.Extensions;
 public static class DataMapper
 {
     public static Data MapToData(this DataDto dataDto)
-        => new Data();
+        => new()
+        {
+            Optional = dataDto.Optional,
+            Some = dataDto.Some
+        };
 
     public static DataDto MapToData(this Data data)
-        => new DataDto();
+        => new()
+        {
+            Optional = data.Optional,
+            Some = data.Some
+        };
 }
