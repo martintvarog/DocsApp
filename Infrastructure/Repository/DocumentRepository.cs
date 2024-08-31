@@ -7,13 +7,13 @@ public class DocumentRepository : IDocumentRepository
 {
     private readonly List<Document> _documents = new();
 
-    public Task<List<Document>> GetDocumentByIdAsync(string id)
-        => Task.FromResult(_documents.Where(d => d.Id == id).ToList());
+    public Task<List<Document>> GetDocumentByIdAsync(int id)
+        => Task.FromResult(_documents.Where(d => d.DocumentId == id).ToList());
 
 
     public Task<bool> AddDocumentAsync(Document document)
     {
-        if (_documents.Any(x => x.Id == document.Id)) return Task.FromResult(false);
+        if (_documents.Any(d => d.DocumentId == document.DocumentId)) return Task.FromResult(false);
         _documents.Add(document);
         return Task.FromResult(true);
     }
@@ -21,7 +21,7 @@ public class DocumentRepository : IDocumentRepository
 
     public async Task<bool> UpdateDocumentAsync(Document document)
     {
-        var documentToUpdate = await GetDocumentByIdAsync(document.Id);
+        var documentToUpdate = await GetDocumentByIdAsync(document.DocumentId);
         if (!documentToUpdate.Any())
             return false;
 

@@ -17,7 +17,7 @@ public class DocumentsController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> Get(string id)
+    public async Task<IActionResult> Get(int id)
     {
         var document = await _documentService.GetDocumentByIdAsync(id);
         if (!document.Any())

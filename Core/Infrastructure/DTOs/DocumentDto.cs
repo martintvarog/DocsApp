@@ -2,9 +2,9 @@ namespace Core.Infrastructure.DTOs;
 
 public sealed record DocumentDto
 {
-    public string Id { get; init; } = string.Empty;
+    public int DocumentId { get; init; }
 
-    public List<string> Tags { get; init; } = new();
+    public List<int> TagIds { get; init; } = new();
 
-    public DataDto Data { get; init; } = default!;
+    public DataDto? Data { get; init; }
 }
