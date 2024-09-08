@@ -20,15 +20,5 @@ public class DocsDbContext : DbContext
     {
         modelBuilder.Entity<DocumentTags>()
             .HasKey(dt => new { dt.DocumentId, dt.TagId });
-        
-        // modelBuilder.Entity<DocumentTags>()
-        //     .HasOne(dt => dt.Document)
-        //     .WithMany(d => d.DocumentTags)
-        //     .HasForeignKey(dt => dt.DocumentId);
-        //
-        // modelBuilder.Entity<DocumentTags>()
-        //     .HasOne(dt => dt.Tag)
-        //     .WithMany(t => t.DocumentTags)
-        //     .HasForeignKey(dt => dt.TagId);
     }
 }
