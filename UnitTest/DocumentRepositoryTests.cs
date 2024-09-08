@@ -53,7 +53,7 @@ namespace UnitTest
             var documentRepository = new DocumentRepository();
 
             var originalDocument = new Document
-                { DocumentId = 1, DocumentTags = null, AdditionalData = new AdditionalData() };
+                { DocumentId = 1, DocumentTags = new List<DocumentTags>(), AdditionalData = new AdditionalData() };
 
             await documentRepository.AddDocumentAsync(originalDocument);
 
@@ -80,7 +80,7 @@ namespace UnitTest
             var documentRepository = new DocumentRepository();
             var document = new Document
             {
-                DocumentId = 1, DocumentTags = null, AdditionalData = new AdditionalData()
+                DocumentId = 1, DocumentTags = new List<DocumentTags>(), AdditionalData = new AdditionalData()
             };
 
             // Act

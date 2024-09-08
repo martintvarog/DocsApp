@@ -6,7 +6,7 @@ public class Document
     
     public int? AdditionalDataId { get; set; }
 
-    public List<DocumentTags>? DocumentTags { get; set; } = new();
+    public List<DocumentTags> DocumentTags { get; set; } = new();
 
     public AdditionalData? AdditionalData { get; set; }
 }
